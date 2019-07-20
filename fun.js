@@ -113,5 +113,9 @@ function rmv() {
 }
 
 function intro() {
+	var scale = 'scale(1)';
+	document.body.style.webkitTransform =  scale;
+ 	document.body.style.msTransform =   scale;
+ 	document.body.style.transform = scale;
 	document.getElementById("instructions").style.display = "block";
 }
