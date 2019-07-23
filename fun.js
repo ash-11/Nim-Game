@@ -55,7 +55,7 @@ function player_move(row){
 		document.images[row*row + arr[row]].src = emp.src
 		if(arr[0] == 0 && arr[1] == 0 && arr[2] == 0 && arr[3] == 0){
 			ct++
-			alert("You lose buddy..... ")
+			alert("You lose buddy..... \nPress OK for another try.")
 			new_game()
 			if(ct >= 3 && hint_taken == 0){
 				var ans = confirm("Want a Hint ?") // if you lose three times continuously, program asks if you need a hint
