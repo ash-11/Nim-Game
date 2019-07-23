@@ -1,6 +1,7 @@
 var ct = 0
 var dp = []
 var arr = [1, 3, 5, 7]
+var hint_taken = 0
 
 for(var i0 = 0; i0 <= arr[0]; i0++){ // initializing the js array with -1
 	var a0 = []
@@ -56,9 +57,10 @@ function player_move(row){
 			ct++
 			alert("You lose buddy..... ")
 			new_game()
-			if(ct >= 3){
+			if(ct >= 3 && hint_taken == 0){
 				var ans = confirm("Want a Hint ?") // if you lose three times continuously, program asks if you need a hint
 				if(ans == true){
+					hint_taken = 1
 					alert("Try giving first move to PC.") // Hint
 				}
 			}
